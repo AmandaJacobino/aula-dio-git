@@ -30,43 +30,45 @@ Ao final deve se exibir uma mensagem:
 const prompt = require("prompt-sync")(); 
 
 //Estrutura de repetição:
-while (true) {
-    //Entrada do nome:
-    let nome = prompt("Digite o nome do herói (ou 'sair' para encerrar): ");
+function main () { 
+    while (true) {
+        //Entrada do nome:
+        let nome = prompt("Digite o nome do herói (ou 'sair' para encerrar): ");
     
-    //O programa funciona até que o usuário decida sair:
-    if (nome.toLowerCase() === "sair") {
-        console.log("Programa encerrado");
-        break;
-    }
-
-    //Entrada da quantidade de xp do usuário:
-    let xp = Number(prompt("Digite a quantidade de xp: "));
-
-    //variável nivel:
-    let nivel;
-
-    //Verificação do nivel com base no xp: 
-    if (xp < 1000) {
-        nivel = "Ferro";
-    } else if (xp >= 1001 && xp <= 2000) {
-        nivel = "Bronze";
-    } else if (xp >= 2001 && xp <= 5000) {
-        nivel = "Prata";
-    } else if (xp >= 5001 && xp <= 7000) {
-        nivel = "Ouro";
-    } else if (xp >= 7001 && xp <= 8000) {
-        nivel = "Platina";
-    } else if (xp >= 8001 && xp <= 9000) {
-        nivel = "Ascendente";
-    } else if (xp >= 9001 && xp <= 10000) {
-        nivel = "Imortal";
-    } else { //Para xp >= 10001
-        nivel = "Radiante";
-    }
+        //O programa funciona até que o usuário decida sair:
+        if (nome.toLowerCase() === "sair") {
+            console.log("Programa encerrado");
+            break;
+        }
     
-    //Saída:
-    console.log(`O herói de nome ${nome} está no nível ${nivel}`);
+        //Entrada da quantidade de xp do usuário:
+        let xp = Number(prompt("Digite a quantidade de xp: "));
+    
+        //variável nivel:
+        let nivel;
+    
+        //Verificação do nivel com base no xp:
+        if (xp < 1000) {
+            nivel = "Ferro";
+        } else if (xp >= 1001 && xp <= 2000) {
+            nivel = "Bronze";
+        } else if (xp >= 2001 && xp <= 5000) {
+            nivel = "Prata";
+        } else if (xp >= 5001 && xp <= 7000) {
+            nivel = "Ouro";
+        } else if (xp >= 7001 && xp <= 8000) {
+            nivel = "Platina";
+        } else if (xp >= 8001 && xp <= 9000) {
+            nivel = "Ascendente";
+        } else if (xp >= 9001 && xp <= 10000) {
+            nivel = "Imortal";
+        } else { //Para xp >= 10001
+            nivel = "Radiante";
+        }
+    
+        //Saída:
+        console.log(`O herói de nome ${nome} está no nível ${nivel}`);
+    }
 }
     
 
