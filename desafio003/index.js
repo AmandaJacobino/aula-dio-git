@@ -46,7 +46,6 @@ class Heroi {
         this.idade = idade;
         this.tipo = tipo;
         
-
         //Verificar o tipo de arma
         if (tipo === "mago") {
             this.ataque = "usou magia";
@@ -63,10 +62,7 @@ class Heroi {
     atacar () {
         console.log (`O ${this.tipo} atacou usando ${this.ataque}`);
     }
-    
-
 }
-
 
 // Criando um herói para testar
 const meuHeroi = new Heroi("Arthur", 25, "guerreiro");
